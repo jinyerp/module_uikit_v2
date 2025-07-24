@@ -2,22 +2,20 @@
 
 namespace Jiny\Uikit\View\Buttons;
 
-use Jiny\Uikit\View\Button\Button;
-
-class ButtonDanger extends Button
+class ButtonDanger extends Buttons
 {
-    public function __construct(
-        $type = 'button',
-        $size = 'md',
-        $disabled = false,
-        $fullWidth = false,
-        $href = null
-    ) {
-        parent::__construct($type, $size, 'danger', $disabled, $fullWidth, $href);
+    protected function getViewName(): string
+    {
+        return 'jiny-uikit::button.button-danger';
     }
 
-    public function render()
+    protected function getVariant(): string
     {
-        return view('jiny-uikit::button.button-danger');
+        return 'danger';
+    }
+
+    protected function isRounded(): bool
+    {
+        return false;
     }
 }

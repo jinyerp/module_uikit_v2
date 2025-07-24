@@ -1,36 +1,11 @@
-@props([
-    'name' => null,
-    'id' => null,
-    'type' => 'text',
-    'value' => null,
-    'placeholder' => null,
-    'label' => null,
-    'required' => false,
-    'disabled' => false,
-    'readonly' => false,
-    'autocomplete' => null,
-    'class' => null
-])
-
-<div {{ $attributes->merge(['class' => '']) }}>
-    @if($label)
-        <label @foreach($component->labelAttributes() as $key => $value) {{ $key }}="{{ $value }}" @endforeach>
-            {{ $label }}
-            @if($required)
-                <span class="text-red-500">*</span>
-            @endif
-        </label>
-    @endif
-
-    <div class="mt-2">
-        <input
-            @foreach($component->inputAttributes() as $key => $value)
-                {{ $key }}="{{ $value }}"
-            @endforeach
-        />
-    </div>
-
-    @error($name)
-        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
-    @enderror
-</div>
+<label for="{{ $id }}" class="block text-sm font-medium text-gray-700 mb-1">
+    {{ $label ?? '' }}
+</label>
+<input type="{{ $type ?? 'text' }}" id="{{ $id }}"
+    {{ $attributes
+        ->except('label')
+        ->except('id')
+        ->merge([
+        'class' => 'block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm'
+    ]) }}
+/>

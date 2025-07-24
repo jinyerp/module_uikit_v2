@@ -2,22 +2,20 @@
 
 namespace Jiny\Uikit\View\Buttons;
 
-use Jiny\Uikit\View\Button\Button;
-
-class ButtonRoundedLight extends Button
+class ButtonRoundedLight extends Buttons
 {
-    public function __construct(
-        $type = 'button',
-        $size = 'md',
-        $disabled = false,
-        $fullWidth = false,
-        $href = null
-    ) {
-        parent::__construct($type, $size, 'light', $disabled, $fullWidth, $href);
+    protected function getViewName(): string
+    {
+        return 'jiny-uikit::button.button-rounded-light';
     }
 
-    public function render()
+    protected function getVariant(): string
     {
-        return view('jiny-uikit::button.button-rounded-light');
+        return 'light';
+    }
+
+    protected function isRounded(): bool
+    {
+        return true;
     }
 }

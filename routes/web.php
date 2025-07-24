@@ -15,4 +15,5 @@ Route::prefix('uikit')->group(function () {
     Route::get('/form-switch', [UikitController::class, 'formSwitch'])->name('uikit.form-switch');
     Route::get('/form-panel', [UikitController::class, 'formPanel'])->name('uikit.form-panel');
     Route::get('/alert', [UikitController::class, 'alert'])->name('uikit.alert');
+    Route::get('/buttons', [UikitController::class, 'buttons'])->name('uikit.buttons');
 });

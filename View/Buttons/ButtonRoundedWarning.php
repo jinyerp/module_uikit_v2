@@ -2,22 +2,20 @@
 
 namespace Jiny\Uikit\View\Buttons;
 
-use Jiny\Uikit\View\Button\Button;
-
-class ButtonRoundedWarning extends Button
+class ButtonRoundedWarning extends Buttons
 {
-    public function __construct(
-        $type = 'button',
-        $size = 'md',
-        $disabled = false,
-        $fullWidth = false,
-        $href = null
-    ) {
-        parent::__construct($type, $size, 'warning', $disabled, $fullWidth, $href);
+    protected function getViewName(): string
+    {
+        return 'jiny-uikit::button.button-rounded-warning';
     }
 
-    public function render()
+    protected function getVariant(): string
     {
-        return view('jiny-uikit::button.button-rounded-warning');
+        return 'warning';
+    }
+
+    protected function isRounded(): bool
+    {
+        return true;
     }
 }

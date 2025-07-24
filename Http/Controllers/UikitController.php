@@ -56,4 +56,9 @@ class UikitController extends Controller
     {
         return view('jiny-uikit::samples.alert');
     }
+
+    public function buttons()
+    {
+        return view('jiny-uikit::samples.buttons');
+    }
 }

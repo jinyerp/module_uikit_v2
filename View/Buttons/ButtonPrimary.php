@@ -2,22 +2,30 @@
 
 namespace Jiny\Uikit\View\Buttons;
 
-use Jiny\Uikit\View\Button\Button;
+use Jiny\Uikit\View\ColorComponent;
 
-class ButtonPrimary extends Button
+class ButtonPrimary extends ColorComponent
 {
-    public function __construct(
-        $type = 'button',
-        $size = 'md',
-        $disabled = false,
-        $fullWidth = false,
-        $href = null
-    ) {
-        parent::__construct($type, $size, 'primary', $disabled, $fullWidth, $href);
+    public $color;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->color = $this->colors['primary'];
     }
 
-    public function render()
+    protected function getViewName(): string
     {
-        return view('jiny-uikit::button.button-primary');
+        return 'jiny-uikit::button.button-primary';
+    }
+
+    protected function getVariant(): string
+    {
+        return 'primary';
+    }
+
+    protected function isRounded(): bool
+    {
+        return false;
     }
 }

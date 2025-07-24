@@ -23,28 +23,20 @@ class FormSelectCheck extends Component
         $name = null,
         $id = null,
         $label = null,
-        $options = [],
         $selected = null,
         $placeholder = null,
         $required = false,
         $disabled = false,
-        $class = null,
-        $optionValue = 'value',
-        $optionLabel = 'label',
-        $optionKey = 'key'
+        $class = null
     ) {
         $this->name = $name;
         $this->id = $id ?? $name;
         $this->label = $label;
-        $this->options = $options;
         $this->selected = $selected;
         $this->placeholder = $placeholder ?? '선택해주세요';
         $this->required = $required;
         $this->disabled = $disabled;
         $this->class = $class;
-        $this->optionValue = $optionValue;
-        $this->optionLabel = $optionLabel;
-        $this->optionKey = $optionKey;
 
         // 고유 ID 생성
         $this->uniqueId = $this->generateUniqueId();

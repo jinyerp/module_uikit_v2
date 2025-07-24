@@ -2,22 +2,20 @@
 
 namespace Jiny\Uikit\View\Buttons;
 
-use Jiny\Uikit\View\Button\Button;
-
-class ButtonOutlineLight extends Button
+class ButtonOutlineLight extends Buttons
 {
-    public function __construct(
-        $type = 'button',
-        $size = 'md',
-        $disabled = false,
-        $fullWidth = false,
-        $href = null
-    ) {
-        parent::__construct($type, $size, 'outline', $disabled, $fullWidth, $href);
+    protected function getViewName(): string
+    {
+        return 'jiny-uikit::button.button-outline-light';
     }
 
-    public function render()
+    protected function getVariant(): string
     {
-        return view('jiny-uikit::button.button-outline-light');
+        return 'outline';
+    }
+
+    protected function isRounded(): bool
+    {
+        return false;
     }
 }

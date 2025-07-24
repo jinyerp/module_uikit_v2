@@ -2,17 +2,17 @@
 
 return [
     'color' => [
-        'primary' => '#007bff',
-        'primary-light' => '#cce3ff',
-        'secondary' => '#6c757d',
-        'secondary-light' => '#e2e3e5',
-        'success' => '#28a745',
-        'success-light' => '#d4edda',
-        'danger' => '#dc3545',
-        'danger-light' => '#f8d7da',
-        'warning' => '#ffc107',
-        'warning-light' => '#fff3cd',
-        'info' => '#17a2b8',
-        'info-light' => '#d1ecf1',
+        'primary'         => '#1E40AF', // Blue-800
+        'primary-light'   => '#3B82F6', // Blue-500
+        'secondary'       => '#64748B', // Gray-500
+        'secondary-light' => '#E5E7EB', // Gray-200
+        'success'         => '#10B981', // Green-500
+        'success-light'   => '#6EE7B7', // Green-300
+        'danger'          => '#EF4444', // Red-500
+        'danger-light'    => '#FCA5A5', // Red-300
+        'warning'         => '#F59E42', // Amber-500
+        'warning-light'   => '#FDE68A', // Amber-200
+        'info'            => '#0EA5E9', // Sky-500
+        'info-light'      => '#7DD3FC', // Sky-300
     ],
 ];

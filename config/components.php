@@ -22,44 +22,45 @@ return [
         'badge-pink' => \Jiny\Uikit\View\Badge\BadgePink::class,
     ],
 
-        // 향후 추가될 컴포넌트들을 위한 섹션들
-        'button' => [
-            // Button 컴포넌트들
-            'button-primary' => \Jiny\Uikit\View\Buttons\ButtonPrimary::class,
-            'button-secondary' => \Jiny\Uikit\View\Buttons\ButtonSecondary::class,
-            'button-success' => \Jiny\Uikit\View\Buttons\ButtonSuccess::class,
-            'button-danger' => \Jiny\Uikit\View\Buttons\ButtonDanger::class,
-            'button-warning' => \Jiny\Uikit\View\Buttons\ButtonWarning::class,
-            'button-info' => \Jiny\Uikit\View\Buttons\ButtonInfo::class,
-            'button-light' => \Jiny\Uikit\View\Buttons\ButtonLight::class,
+    // 향후 추가될 컴포넌트들을 위한 섹션들
+    'button' => [
+        // Button 컴포넌트들
+        'button-primary' => \Jiny\Uikit\View\Buttons\ButtonPrimary::class,
+        'button-secondary' => \Jiny\Uikit\View\Buttons\ButtonSecondary::class,
+        'button-success' => \Jiny\Uikit\View\Buttons\ButtonSuccess::class,
+        'button-danger' => \Jiny\Uikit\View\Buttons\ButtonDanger::class,
+        'button-warning' => \Jiny\Uikit\View\Buttons\ButtonWarning::class,
+        'button-info' => \Jiny\Uikit\View\Buttons\ButtonInfo::class,
+        'button-light' => \Jiny\Uikit\View\Buttons\ButtonLight::class,
+        'button-dark' => 'jiny-uikit::button.button-dark',
 
-            'button-outline-primary' => \Jiny\Uikit\View\Buttons\ButtonOutlinePrimary::class,
-            'button-outline-secondary' => \Jiny\Uikit\View\Buttons\ButtonOutlineSecondary::class,
-            'button-outline-success' => \Jiny\Uikit\View\Buttons\ButtonOutlineSuccess::class,
-            'button-outline-danger' => \Jiny\Uikit\View\Buttons\ButtonOutlineDanger::class,
-            'button-outline-warning' => \Jiny\Uikit\View\Buttons\ButtonOutlineWarning::class,
-            'button-outline-info' => \Jiny\Uikit\View\Buttons\ButtonOutlineInfo::class,
-            'button-outline-light' => \Jiny\Uikit\View\Buttons\ButtonOutlineLight::class,
-            'button-outline-dark' => \Jiny\Uikit\View\Buttons\ButtonOutlineDark::class,
+        'button-outline-primary' => \Jiny\Uikit\View\Buttons\ButtonOutlinePrimary::class,
+        'button-outline-secondary' => \Jiny\Uikit\View\Buttons\ButtonOutlineSecondary::class,
+        'button-outline-success' => \Jiny\Uikit\View\Buttons\ButtonOutlineSuccess::class,
+        'button-outline-danger' => \Jiny\Uikit\View\Buttons\ButtonOutlineDanger::class,
+        'button-outline-warning' => \Jiny\Uikit\View\Buttons\ButtonOutlineWarning::class,
+        'button-outline-info' => \Jiny\Uikit\View\Buttons\ButtonOutlineInfo::class,
+        'button-outline-light' => \Jiny\Uikit\View\Buttons\ButtonOutlineLight::class,
+        'button-outline-dark' => \Jiny\Uikit\View\Buttons\ButtonOutlineDark::class,
 
-            'button-rounded-primary' => \Jiny\Uikit\View\Buttons\ButtonRoundedPrimary::class,
-            'button-rounded-secondary' => \Jiny\Uikit\View\Buttons\ButtonRoundedSecondary::class,
-            'button-rounded-success' => \Jiny\Uikit\View\Buttons\ButtonRoundedSuccess::class,
-            'button-rounded-danger' => \Jiny\Uikit\View\Buttons\ButtonRoundedDanger::class,
-            'button-rounded-warning' => \Jiny\Uikit\View\Buttons\ButtonRoundedWarning::class,
-            'button-rounded-info' => \Jiny\Uikit\View\Buttons\ButtonRoundedInfo::class,
-            'button-rounded-light' => \Jiny\Uikit\View\Buttons\ButtonRoundedLight::class,
-            'button-rounded-dark' => \Jiny\Uikit\View\Buttons\ButtonRoundedDark::class,
+        'button-rounded-primary' => \Jiny\Uikit\View\Buttons\ButtonRoundedPrimary::class,
+        'button-rounded-secondary' => \Jiny\Uikit\View\Buttons\ButtonRoundedSecondary::class,
+        'button-rounded-success' => \Jiny\Uikit\View\Buttons\ButtonRoundedSuccess::class,
+        'button-rounded-danger' => \Jiny\Uikit\View\Buttons\ButtonRoundedDanger::class,
+        'button-rounded-warning' => \Jiny\Uikit\View\Buttons\ButtonRoundedWarning::class,
+        'button-rounded-info' => \Jiny\Uikit\View\Buttons\ButtonRoundedInfo::class,
+        'button-rounded-light' => \Jiny\Uikit\View\Buttons\ButtonRoundedLight::class,
+        'button-rounded-dark' => \Jiny\Uikit\View\Buttons\ButtonRoundedDark::class,
 
-            'button-rounded-outline-primary' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlinePrimary::class,
-            'button-rounded-outline-secondary' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineSecondary::class,
-            'button-rounded-outline-success' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineSuccess::class,
-            'button-rounded-outline-danger' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineDanger::class,
-            'button-rounded-outline-warning' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineWarning::class,
-            'button-rounded-outline-info' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineInfo::class,
-            'button-rounded-outline-light' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineLight::class,
-            'button-rounded-outline-dark' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineDark::class,
-        ],
+        'button-rounded-outline-primary' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlinePrimary::class,
+        'button-rounded-outline-secondary' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineSecondary::class,
+        'button-rounded-outline-success' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineSuccess::class,
+        'button-rounded-outline-danger' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineDanger::class,
+        'button-rounded-outline-warning' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineWarning::class,
+        'button-rounded-outline-info' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineInfo::class,
+        'button-rounded-outline-light' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineLight::class,
+        'button-rounded-outline-dark' => \Jiny\Uikit\View\Buttons\ButtonRoundedOutlineDark::class,
+    ],
 
     'card' => [
         // Card 컴포넌트들
@@ -74,11 +75,16 @@ return [
         'form-password' => \Jiny\Uikit\View\Forms\FormPassword::class,
         'form-number' => \Jiny\Uikit\View\Forms\FormNumber::class,
         'form-tel' => \Jiny\Uikit\View\Forms\FormTel::class,
+        'form-phone' => \Jiny\Uikit\View\Forms\FormTel::class,
         'form-url' => \Jiny\Uikit\View\Forms\FormUrl::class,
         'form-date' => \Jiny\Uikit\View\Forms\FormDate::class,
         'form-time' => \Jiny\Uikit\View\Forms\FormTime::class,
         'form-search' => \Jiny\Uikit\View\Forms\FormSearch::class,
+
         'form-select-check' => \Jiny\Uikit\View\Forms\FormSelectCheck::class,
+        'form-select-item' => \Jiny\Uikit\View\Forms\FormSelectItem::class,
+        'form-listbox' => \Jiny\Uikit\View\Forms\FormListbox::class,
+        'form-listbox-item' => \Jiny\Uikit\View\Forms\FormListboxItem::class,
         'form-textarea' => \Jiny\Uikit\View\Forms\FormTextarea::class,
         'form-radio' => \Jiny\Uikit\View\Forms\FormRadio::class,
         'form-radio-item' => \Jiny\Uikit\View\Forms\FormRadioItem::class,
@@ -99,5 +105,23 @@ return [
 
     'table' => [
         // Table 컴포넌트들
+        'table-stripe' => \Jiny\Uikit\View\Table\TableStripe::class,
+        'table-thead' => \Jiny\Uikit\View\Table\TableThead::class,
+        'table-th' => \Jiny\Uikit\View\Table\TableTh::class,
+        'table-row' => \Jiny\Uikit\View\Table\TableRow::class,
+        'table-filter' => \Jiny\Uikit\View\Table\TableFilter::class,
+        'table-border' => \Jiny\Uikit\View\Table\TableBorder::class,
+    ],
+
+    'dropdown' => [
+        'dropdown-link' => \Jiny\Uikit\View\Components\DropdownLink::class,
+    ],
+
+    'grid' => [
+        'grid' => \Jiny\Uikit\View\Grids\Grid::class,
+    ],
+
+    'div' => [
+        'border-rounded' => \Jiny\Uikit\View\Div\BorderRounded::class,
     ],
 ];

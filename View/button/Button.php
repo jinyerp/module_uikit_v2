@@ -97,7 +97,7 @@ class Button extends Component
      */
     public function getClasses(): string
     {
-        $baseClasses = 'inline-flex items-center justify-center font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed';
+        $baseClasses = 'inline-flex items-center justify-center font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
         // 크기별 클래스
         $sizeClasses = [
@@ -108,20 +108,37 @@ class Button extends Component
             'xl' => 'rounded-md px-3.5 py-2.5 text-sm'
         ];
 
-        // 변형별 클래스
-        $variantClasses = [
-            'primary' => 'bg-indigo-600 hover:bg-indigo-500 text-white',
-            'secondary' => 'bg-gray-600 hover:bg-gray-500',
-            'success' => 'bg-green-600 hover:bg-green-500',
-            'danger' => 'bg-red-600 hover:bg-red-500',
-            'warning' => 'bg-yellow-600 hover:bg-yellow-500',
-            'info' => 'bg-blue-600 hover:bg-blue-500',
-            'light' => 'bg-gray-100 hover:bg-gray-200 text-gray-900',
-            'outline' => 'bg-white text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50',
-            'soft' => 'bg-indigo-50 text-indigo-600 shadow-xs hover:bg-indigo-100'
+        // config에서 색상값 읽기
+        $colors = config('jiny.uikit.ui.color', []);
+        $variantColors = [
+            'primary'   => $colors['primary'] ?? '#1E40AF',
+            'secondary' => $colors['secondary'] ?? '#64748B',
+            'success'   => $colors['success'] ?? '#10B981',
+            'danger'    => $colors['danger'] ?? '#EF4444',
+            'warning'   => $colors['warning'] ?? '#F59E42',
+            'info'      => $colors['info'] ?? '#0EA5E9',
+            'light'     => $colors['secondary-light'] ?? '#E5E7EB',
+            'outline'   => $colors['primary-light'] ?? '#3B82F6',
+            'soft'      => $colors['primary-light'] ?? '#3B82F6',
         ];
 
-        $classes = $baseClasses . ' ' . $sizeClasses[$this->size] . ' ' . $variantClasses[$this->variant];
+        $variant = $this->variant;
+        $color = $variantColors[$variant] ?? $variantColors['primary'];
+
+        // variant별 클래스 생성 (bg, hover 등)
+        $variantClasses = [
+            'primary'   => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'secondary' => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'success'   => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'danger'    => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'warning'   => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'info'      => 'bg-['.$color.'] hover:opacity-90 text-white',
+            'light'     => 'bg-['.$color.'] hover:opacity-90 text-gray-900',
+            'outline'   => 'bg-white text-['.$color.'] shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50',
+            'soft'      => 'bg-['.$color.'] text-['.$color.'] shadow-xs hover:opacity-80',
+        ];
+
+        $classes = $baseClasses . ' ' . $sizeClasses[$this->size] . ' ' . ($variantClasses[$variant] ?? $variantClasses['primary']);
 
         if ($this->fullWidth) {
             $classes .= ' w-full';
