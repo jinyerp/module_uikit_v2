@@ -1,0 +1,169 @@
+{
+    "top_menu": [
+        {
+            "type": "menu",
+            "label": "Dashboard3",
+            "url": "/dashboard",
+            "icon": "dashboard",
+            "active": true
+        },
+        {
+            "type": "menu",
+            "label": "Team Management",
+            "url": "/team",
+            "icon": "team",
+            "children": [
+                {
+                    "type": "menu",
+                    "label": "Team Members",
+                    "url": "/team/members",
+                    "icon": "users"
+                },
+                {
+                    "type": "menu",
+                    "label": "Team Roles",
+                    "url": "/team/roles",
+                    "icon": "user-group"
+                },
+                {
+                    "type": "menu",
+                    "label": "Team Settings",
+                    "url": "/team/settings",
+                    "icon": "settings"
+                }
+            ]
+        },
+        {
+            "type": "menu",
+            "label": "Projects",
+            "url": "/projects",
+            "icon": "project",
+            "children": [
+                {
+                    "type": "menu",
+                    "label": "Active Projects",
+                    "url": "/projects/active",
+                    "icon": "folder"
+                },
+                {
+                    "type": "menu",
+                    "label": "Completed Projects",
+                    "url": "/projects/completed",
+                    "icon": "folder"
+                },
+                {
+                    "type": "menu",
+                    "label": "Project Templates",
+                    "url": "/projects/templates",
+                    "icon": "document"
+                }
+            ]
+        },
+        {
+            "type": "menu",
+            "label": "Calendar",
+            "url": "/calendar",
+            "icon": "calendar"
+        },
+        {
+            "type": "menu",
+            "label": "Documents",
+            "url": "/documents",
+            "icon": "document",
+            "children": [
+                {
+                    "type": "menu",
+                    "label": "All Documents",
+                    "url": "/documents/all",
+                    "icon": "document"
+                },
+                {
+                    "type": "menu",
+                    "label": "Shared Documents",
+                    "url": "/documents/shared",
+                    "icon": "document-text"
+                },
+                {
+                    "type": "menu",
+                    "label": "Document Templates",
+                    "url": "/documents/templates",
+                    "icon": "document"
+                }
+            ]
+        },
+        {
+            "type": "menu",
+            "label": "Reports",
+            "url": "/reports",
+            "icon": "report",
+            "children": [
+                {
+                    "type": "menu",
+                    "label": "Analytics",
+                    "url": "/reports/analytics",
+                    "icon": "analytics"
+                },
+                {
+                    "type": "menu",
+                    "label": "Performance",
+                    "url": "/reports/performance",
+                    "icon": "performance"
+                },
+                {
+                    "type": "menu",
+                    "label": "Custom Reports",
+                    "url": "/reports/custom",
+                    "icon": "custom-report"
+                }
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "type": "menu",
+            "label": "Heroicons",
+            "url": "/teams/heroicons",
+            "icon": "H"
+        },
+        {
+            "type": "menu",
+            "label": "Tailwind Labs",
+            "url": "/teams/tailwind-labs",
+            "icon": "T"
+        },
+        {
+            "type": "menu",
+            "label": "Workcation",
+            "url": "/teams/workcation",
+            "icon": "W"
+        }
+    ],
+    "bottom_menu": [
+        {
+            "type": "menu",
+            "label": "Settings",
+            "url": "/settings",
+            "icon": "settings",
+            "children": [
+                {
+                    "type": "menu",
+                    "label": "General Settings",
+                    "url": "/settings/general",
+                    "icon": "settings"
+                },
+                {
+                    "type": "menu",
+                    "label": "Security",
+                    "url": "/settings/security",
+                    "icon": "lock-closed"
+                },
+                {
+                    "type": "menu",
+                    "label": "Advanced",
+                    "url": "/settings/advanced",
+                    "icon": "wrench-screwdriver"
+                }
+            ]
+        }
+    ]
+}

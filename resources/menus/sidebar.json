@@ -1,0 +1,69 @@
+{
+    "top_menu": [
+        {
+            "type": "menu",
+            "label": "Dashboard2",
+            "url": "/dashboard",
+            "icon": "home",
+            "active": true
+        },
+        {
+            "type": "menu",
+            "label": "Team",
+            "url": "/team",
+            "icon": "users"
+        },
+        {
+            "type": "menu",
+            "label": "Projects",
+            "url": "/projects",
+            "icon": "folder"
+        },
+        {
+            "type": "menu",
+            "label": "Calendar",
+            "url": "/calendar",
+            "icon": "calendar"
+        },
+        {
+            "type": "menu",
+            "label": "Documents",
+            "url": "/documents",
+            "icon": "document"
+        },
+        {
+            "type": "menu",
+            "label": "Reports",
+            "url": "/reports",
+            "icon": "chart"
+        }
+    ],
+    "teams": [
+        {
+            "type": "menu",
+            "label": "Heroicons",
+            "url": "/teams/heroicons",
+            "icon": "H"
+        },
+        {
+            "type": "menu",
+            "label": "Tailwind Labs",
+            "url": "/teams/tailwind-labs",
+            "icon": "T"
+        },
+        {
+            "type": "menu",
+            "label": "Workcation",
+            "url": "/teams/workcation",
+            "icon": "W"
+        }
+    ],
+    "bottom_menu": [
+        {
+            "type": "menu",
+            "label": "Settings",
+            "url": "/settings",
+            "icon": "settings"
+        }
+    ]
+}

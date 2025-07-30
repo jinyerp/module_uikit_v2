@@ -1,7 +1,8 @@
 <tr class="even:bg-gray-50" data-row-id="{{ $item?->id ?? '' }}">
     <td class="w-10 min-w-0 max-w-[40px] py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-3">
         <div class="group grid size-4 grid-cols-1">
-            <input id="candidate-{{ $item?->id ?? '' }}" aria-describedby="candidates-description" name="candidates[]"
+            {{-- bulk-delete 개별선택 --}}
+            <input id="bulk-checked-{{ $item?->id ?? '' }}" aria-describedby="bulk-checkeds-description" name="bulk-checkeds[]"
                 value="{{ $item?->id ?? '' }}" type="checkbox"
                 class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
             <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
@@ -11,6 +12,7 @@
                 <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+
         </div>
     </td>
     {{ $slot }}
