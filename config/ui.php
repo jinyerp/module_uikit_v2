@@ -1,18 +1,27 @@
 <?php
 
 return [
-    'color' => [
-        'primary'         => '#1E40AF', // Blue-800
-        'primary-light'   => '#3B82F6', // Blue-500
-        'secondary'       => '#64748B', // Gray-500
-        'secondary-light' => '#E5E7EB', // Gray-200
-        'success'         => '#10B981', // Green-500
-        'success-light'   => '#6EE7B7', // Green-300
-        'danger'          => '#EF4444', // Red-500
-        'danger-light'    => '#FCA5A5', // Red-300
-        'warning'         => '#F59E42', // Amber-500
-        'warning-light'   => '#FDE68A', // Amber-200
-        'info'            => '#0EA5E9', // Sky-500
-        'info-light'      => '#7DD3FC', // Sky-300
+    // 기본 UI 설정값
+    'defaults' => [
+        'theme' => 'light',
+        'language' => 'ko',
+        'timezone' => 'Asia/Seoul',
+        'sidebar_collapsed' => false,
+        'show_breadcrumbs' => true,
+        'show_page_title' => true,
+        'auto_save_forms' => true,
+        'notifications_position' => 'top-right',
     ],
+
+    // 현재 활성화된 설정 (런타임에 변경 가능)
+    'current' => [
+        'theme' => env('UIKIT_THEME', 'light'),
+        'sidebar_collapsed' => false,
+        'show_user_info' => true,
+        'show_team_switcher' => true,
+    ],
+
+    // 레거시 호환성을 위한 별칭
+    'color' => config('uikit-design.color', []),
+    'theme' => config('uikit-design.theme', []),
 ];

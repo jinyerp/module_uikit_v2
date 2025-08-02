@@ -25,6 +25,12 @@ class JinyUikitServiceProvider extends ServiceProvider
 
         // 패키지 루트 경로 등록
         $this->registerPackageRoot();
+        
+        // UI 설정 파일들 병합
+        $this->mergeConfigFrom(__DIR__.'/config/ui.php', 'uikit-ui');
+        $this->mergeConfigFrom(__DIR__.'/config/design.php', 'uikit-design');
+        $this->mergeConfigFrom(__DIR__.'/config/behavior.php', 'uikit-behavior');
+        $this->mergeConfigFrom(__DIR__.'/config/color.php', 'uikit-color');
     }
 
     /**
@@ -35,6 +41,10 @@ class JinyUikitServiceProvider extends ServiceProvider
         // 설정 파일 등록
         $this->publishes([
             __DIR__.'/config/components.php' => config_path('uikit-components.php'),
+            __DIR__.'/config/ui.php' => config_path('uikit-ui.php'),
+            __DIR__.'/config/design.php' => config_path('uikit-design.php'),
+            __DIR__.'/config/behavior.php' => config_path('uikit-behavior.php'),
+            __DIR__.'/config/color.php' => config_path('uikit-color.php'),
         ], 'uikit-config');
 
         // 마이그레이션 등록

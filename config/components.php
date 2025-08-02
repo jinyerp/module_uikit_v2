@@ -63,7 +63,7 @@ return [
     ],
 
     'card' => [
-        // Card 컴포넌트들
+        'card' => \Jiny\Uikit\App\View\Cards\Card::class,
     ],
 
     'form' => [
@@ -157,5 +157,16 @@ return [
 
     'nav' => [
         'navbar' => \Jiny\Uikit\App\View\Layouts\Navbar::class,
+    ],
+
+    'link' => [
+        'link-primary' => 'jiny-uikit::links.link-primary',
+        'link-secondary' => 'jiny-uikit::links.link-secondary',
+        'link-success' => 'jiny-uikit::links.link-success',
+        'link-info' => 'jiny-uikit::links.link-info',
+        'link-warning' => 'jiny-uikit::links.link-warning',
+        'link-danger' => 'jiny-uikit::links.link-danger',
+        'link-light' => 'jiny-uikit::links.link-light',
+        'link-dark' => 'jiny-uikit::links.link-dark',
     ]
 ];

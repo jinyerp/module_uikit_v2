@@ -20,15 +20,7 @@
                     class="flex grow flex-col gap-y-5 overflow-y-auto {{ $colors['sidebar_bg'] }} px-6 pb-4 {{ $colors['sidebar_border'] }}">
                     <div class="flex h-16 shrink-0 items-center">
                         {{-- 로고 슬롯 --}}
-                        @if(isset($slot) && $slot->isNotEmpty())
-                            {{ $slot }}
-                        @elseif(isset($logo))
-                            {{ $logo }}
-                        @else
-                            {{-- 기본 로고 --}}
-                            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg{{ $colors['logo_color'] }}"
-                                alt="Your Company" class="h-8 w-auto" />
-                        @endif
+                        {{ $slot }}
                     </div>
                     <nav class="flex flex-1 flex-col">
                         @if($hasMenu)
@@ -116,15 +108,7 @@
         class="flex grow flex-col gap-y-5 overflow-y-auto {{ $colors['sidebar_bg'] }} px-6 pb-4 {{ $colors['sidebar_border'] }}">
         <div class="flex h-16 shrink-0 items-center">
             {{-- 로고 슬롯 --}}
-            @if(isset($slot) && $slot->isNotEmpty())
-                {{ $slot }}
-            @elseif(isset($logo))
-                {{ $logo }}
-            @else
-                {{-- 기본 로고 --}}
-                <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg{{ $colors['logo_color'] }}"
-                    alt="Your Company" class="h-8 w-auto" />
-            @endif
+            {{ $slot }}
         </div>
         <nav class="flex flex-1 flex-col">
             @if($hasMenu)
