@@ -1,22 +1,19 @@
 <?php
 
-namespace Jiny\Uikit\App\View\Grids;
+namespace Jiny\Uikit\App\View\Layouts;
 
 use Illuminate\View\Component;
 
-class Grid extends Component
+class ResourceFilters extends Component
 {
-    public $col;
-
     /**
      * Create a new component instance.
      *
-     * @param int $col
      * @return void
      */
-    public function __construct($col = 4)
+    public function __construct()
     {
-        $this->col = $col;
+        //
     }
 
     /**
@@ -26,6 +23,6 @@ class Grid extends Component
      */
     public function render()
     {
-        return view('jiny-uikit::grids.grid');
+        return view('jiny-uikit::components.layouts.resource_filters');
     }
 }

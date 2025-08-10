@@ -32,7 +32,7 @@ return [
         'button-warning' => \Jiny\Uikit\App\View\Buttons\ButtonWarning::class,
         'button-info' => \Jiny\Uikit\App\View\Buttons\ButtonInfo::class,
         'button-light' => \Jiny\Uikit\App\View\Buttons\ButtonLight::class,
-        'button-dark' => 'jiny-uikit::button.button-dark',
+        'button-dark' => \Jiny\Uikit\App\View\Buttons\ButtonDark::class,
 
         'button-outline-primary' => \Jiny\Uikit\App\View\Buttons\ButtonOutlinePrimary::class,
         'button-outline-secondary' => \Jiny\Uikit\App\View\Buttons\ButtonOutlineSecondary::class,
@@ -70,6 +70,8 @@ return [
         // Form 컴포넌트들
         'form-section' => \Jiny\Uikit\App\View\Forms\FormSection::class,
         'form-checkbox' => \Jiny\Uikit\App\View\Forms\FormCheckbox::class,
+        'form-checkbox-auto' => \Jiny\Uikit\App\View\Forms\FormCheckboxAuto::class,
+        'form-toggle-switch' => \Jiny\Uikit\App\View\Forms\FormToggleSwitch::class,
         'form-input' => \Jiny\Uikit\App\View\Forms\FormInput::class,
         'form-email' => \Jiny\Uikit\App\View\Forms\FormEmail::class,
         'form-password' => \Jiny\Uikit\App\View\Forms\FormPassword::class,
@@ -147,6 +149,10 @@ return [
         'open-sidebar-button' => \Jiny\Uikit\App\View\Layouts\OpenSidebarButton::class,
     ],
 
+    'layout' => [
+        'layout-resource-filters' => \Jiny\Uikit\App\View\Layouts\ResourceFilters::class,
+    ],
+
     'icon' => [
         'icon' => \Jiny\Uikit\App\View\Components\Icon::class,
     ],
@@ -157,6 +163,10 @@ return [
 
     'nav' => [
         'navbar' => \Jiny\Uikit\App\View\Layouts\Navbar::class,
+    ],
+
+    'progress' => [
+        'period-progress' => \Jiny\Uikit\App\View\Progress\PeriodProgress::class,
     ],
 
     'link' => [

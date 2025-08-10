@@ -3,7 +3,7 @@ namespace Jiny\Uikit\App\View\Forms;
 
 use Illuminate\View\Component;
 
-class FormCheckbox extends Component
+class FormCheckboxAuto extends Component
 {
     public $id;
     public $name;
@@ -17,7 +17,7 @@ class FormCheckbox extends Component
         $this->name = $name;
         $this->id = $id ?? $name;
         $this->value = $value === null ? 1 : $value;
-
+        
         // checked 속성을 올바르게 처리
         if (is_bool($checked)) {
             $this->checked = $checked;
@@ -26,13 +26,13 @@ class FormCheckbox extends Component
         } else {
             $this->checked = (bool) $checked;
         }
-
+        
         $this->label = $label;
         $this->class = $class;
     }
 
     public function render()
     {
-        return view('jiny-uikit::forms.checkbox');
+        return view('jiny-uikit::forms.form-checkbox-auto');
     }
 }

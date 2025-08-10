@@ -125,46 +125,52 @@ return [
 /**
  * 색상 밝기 조정 함수
  */
-function adjustBrightness($hex, $percent) {
-    $hex = ltrim($hex, '#');
+if (!function_exists('adjustBrightness')) {
+    function adjustBrightness($hex, $percent) {
+        $hex = ltrim($hex, '#');
 
-    $r = hexdec(substr($hex, 0, 2));
-    $g = hexdec(substr($hex, 2, 2));
-    $b = hexdec(substr($hex, 4, 2));
+        $r = hexdec(substr($hex, 0, 2));
+        $g = hexdec(substr($hex, 2, 2));
+        $b = hexdec(substr($hex, 4, 2));
 
-    $r = max(0, min(255, $r + ($r * $percent / 100)));
-    $g = max(0, min(255, $g + ($g * $percent / 100)));
-    $b = max(0, min(255, $b + ($b * $percent / 100)));
+        $r = max(0, min(255, $r + ($r * $percent / 100)));
+        $g = max(0, min(255, $g + ($g * $percent / 100)));
+        $b = max(0, min(255, $b + ($b * $percent / 100)));
 
-    return '#' . str_pad(dechex($r), 2, '0', STR_PAD_LEFT) .
-                 str_pad(dechex($g), 2, '0', STR_PAD_LEFT) .
-                 str_pad(dechex($b), 2, '0', STR_PAD_LEFT);
+        return '#' . str_pad(dechex($r), 2, '0', STR_PAD_LEFT) .
+                     str_pad(dechex($g), 2, '0', STR_PAD_LEFT) .
+                     str_pad(dechex($b), 2, '0', STR_PAD_LEFT);
+    }
 }
 
 /**
  * 색상 대비 계산 함수
  */
-function calculateContrast($hex) {
-    $hex = ltrim($hex, '#');
+if (!function_exists('calculateContrast')) {
+    function calculateContrast($hex) {
+        $hex = ltrim($hex, '#');
 
-    $r = hexdec(substr($hex, 0, 2));
-    $g = hexdec(substr($hex, 2, 2));
-    $b = hexdec(substr($hex, 4, 2));
+        $r = hexdec(substr($hex, 0, 2));
+        $g = hexdec(substr($hex, 2, 2));
+        $b = hexdec(substr($hex, 4, 2));
 
-    $luminance = (0.299 * $r + 0.587 * $g + 0.114 * $b) / 255;
+        $luminance = (0.299 * $r + 0.587 * $g + 0.114 * $b) / 255;
 
-    return $luminance > 0.5 ? '#000000' : '#FFFFFF';
+        return $luminance > 0.5 ? '#000000' : '#FFFFFF';
+    }
 }
 
 /**
  * 색상에 투명도 추가 함수
  */
-function addOpacity($hex, $opacity) {
-    $hex = ltrim($hex, '#');
+if (!function_exists('addOpacity')) {
+    function addOpacity($hex, $opacity) {
+        $hex = ltrim($hex, '#');
 
-    $r = hexdec(substr($hex, 0, 2));
-    $g = hexdec(substr($hex, 2, 2));
-    $b = hexdec(substr($hex, 4, 2));
+        $r = hexdec(substr($hex, 0, 2));
+        $g = hexdec(substr($hex, 2, 2));
+        $b = hexdec(substr($hex, 4, 2));
 
-    return "rgba($r, $g, $b, $opacity)";
+        return "rgba($r, $g, $b, $opacity)";
+    }
 }
