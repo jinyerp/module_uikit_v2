@@ -1,4 +1,4 @@
-# Jiny UIKit
+# Jiny UIKit with TailwindCSS
 
 Laravel 기반에서 Tailwind CSS로 구현된 재사용 가능한 UI 컴포넌트 라이브러리입니다. 모든 컴포넌트는 `x-ui::` 네임스페이스를 사용하여 일관된 디자인 시스템을 제공합니다.
 
